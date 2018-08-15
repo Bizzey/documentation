@@ -1,0 +1,20 @@
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'API_ENDPOINT'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">'Authorization'</span><span class="p">:</span> <span class="s1">'API_KEY'</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>API_KEY</code> with your API key.</p>
+</blockquote>
+
+<p>Authenticate your account by including your secret key in API requests. You can manage your API keys in the <a href="https://www.bizzey.be/account">Account section</a>. Your API keys carry many privileges, so keep them secure at all times! Do not share you secret API key in publicly accesible areas such as repositories, client-side code and so on.</p>
+
+<p>Authentication to the API is performed via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP basic Auth</a></p>
+
+<p>All API requests must be made over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a>.
+Calls made over plain HTTP and without authentication will fail.</p>
