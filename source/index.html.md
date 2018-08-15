@@ -19,11 +19,9 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+The Bizzey API is organized around REST. Our API has predictable, resource-oriented URLs and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs which are understood by off-the-shelf HTTP clients. We support cross-origin resource sharing [cross-origin resource sharing](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing), allowing you to interact securely with our API from a client-side web application. [JSON](http://www.json.org/) is returned by all API responses, including errors.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+**The requests in the right sidebar are designed to work as is.** The sample requests are performed using an API key, linked to your account under the account section inside Bizzey. Only you can see this account-specific value.
 
 # Authentication
 
@@ -55,11 +53,12 @@ let api = kittn.authorize('meowmeowmeow');
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Authenticate your account by including your secret key in API requests. You can manage your API keys in the [Account section](https://www.bizzey.be/account) Your API keys carry many privileges, so keep them secure at all times! Do not share you secret API key in publicly accesible areas such as repositories, client-side code and so on.
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Authentication to the API is performed via [HTTP basic Auth](http://en.wikipedia.org/wiki/Basic_access_authentication)
 
-`Authorization: meowmeowmeow`
+All API requests must be mode over [HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure).
+Calls made over plain HTTP and without authentication will fail.
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
